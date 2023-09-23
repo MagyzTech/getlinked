@@ -113,8 +113,10 @@ const RegisterForm = () => {
           Register
         </h4>
 
-        <div className="flex items-end whitespace-nowrap">
-          <p className="font-semibold">Be part of this movement!</p>
+        <div className="flex items-end ">
+          <p className="font-semibold text-sm lg:text-lg">
+            Be part of this movement!
+          </p>
           <div className="flex relative border-b border-dashed border-primary px-[40px]">
             <span className="lg:w-[50px] lg:h-[50px] w-[30px] h-[30px] relative lady"></span>
             <span className="lg:w-[50px] lg:h-[50px] w-[30px] h-[30px] relative male"></span>
