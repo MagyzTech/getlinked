@@ -70,7 +70,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="lg:absolute lg:h-full lg:w-[50vw] lg:right-0 w-full bottom-0 z-0 lg:pt-[150px]">
+      <div className="lg:absolute h-[300px] lg:h-full lg:w-[50vw] lg:right-0 w-full bottom-0 z-0 lg:pt-[150px]">
         <div className="absolute inset-0 overlay w-full h-full z-[1]"></div>
         <TechCanvas />
       </div>
