@@ -3,25 +3,197 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 225, 225, 225, 0.8;
+  --background-start-rgb: 21, 14, 40;
+  --background-end-rgb: 21, 14, 40;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.hash-span {
+  margin-top: -100px;
+  padding-bottom: 100px;
+  display: block;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  padding: 0;
+  margin: 0;
+  color: rgba(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+.overlay {
+  background: url("/Purple-Lens-Flare-PNG.png") no-repeat;
+  background-blend-mode: hard-light;
+}
+.sphare::before {
+  content: "";
+  background: url("/Purple-Lens-Flare-PNG.png");
+  background-blend-mode: hard-light;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-blend-mode: hard-light;
+  background-size: contain;
+  z-index: 0;
+}
+.person {
+  background-image: url("/man.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: sepia(1);
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.wave-text::before {
+  content: attr(data-content);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.wave-text::before {
+  content: attr(data-content);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.wave-text::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10px; /* Adjust the height of the wave */
+  background-image: linear-gradient(
+    to right,
+    #fff 25%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-position: bottom;
+  background-size: 50% 100%;
+  animation: waveAnimation 0.5s infinite alternate;
+}
+.particles {
+  position: absolute;
+  right: 0;
+}
+.bulb {
+  width: 50px;
+  height: 50px;
+  background-image: url("../app/constants/assets/bulb.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 50px;
+  left: 0;
+}
+.blast {
+  width: 30px;
+  height: 30px;
+  background-image: url("../app/constants/assets/blast.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 160px;
+  right: -10px;
+  z-index: 1;
+}
+.lady {
+  background-image: url("../app/constants/assets/walker-f.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.success {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.success.man {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../app/constants/assets/successful-man-302571325269111.png");
+}
+.success.icon {
+  margin-left: -140px;
+  background-image: url("../app/constants/assets/successfully-done-510847242880331.png");
+}
+.male {
+  background-image: url("../app/constants/assets/walker-m.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.chain {
+  width: 60px;
+  height: 60px;
+  background-image: url("../app/constants/assets/chain.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: -10px;
+  left: 150px;
+  z-index: 1;
+}
+.question-mark {
+  position: absolute;
+  z-index: 3;
+}
+.question-1 {
+  color: #a866fd;
+  font-family: MADE TOMMY Outline;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27.5px; /* 28.646% */
+  bottom: 50px;
+}
+.question-2 {
+  color: #d434fe;
+  font-family: MADE TOMMY Outline;
+  font-size: 78px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27.5px; /* 21.484% */
+  left: 50px;
+  top: 10px;
+}
+.question-mark.last {
+  right: 100px;
+  top: 0;
+  font-size: 96px;
+}
+.vertical-timeline--animate .vertical-timeline-element-content.is-hidden {
+  visibility: visible;
 }
