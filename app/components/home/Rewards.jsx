@@ -73,21 +73,18 @@ const Rewards = () => {
             <div className="relative">
               <div className={styles.glassCardWinner}>
                 <motion.div
-                  variants={{
-                    hidden: {
-                      opacity: 1,
-                    },
-                    show: {
-                      opacity: 1,
-                      rotate: [0, -10, 10, -10, 10, 0],
-                      transition: {
-                        duration: 1.5,
-                        repeat: 2,
-                        repeatType: "mirror",
-                      },
+                  initial={{ opacity: 1, translateX: "-50%" }}
+                  animate={{
+                    opacity: 1,
+                    rotate: [0, -10, 10, -10, 10, 0],
+                    transition: {
+                      duration: 1.5,
+                      repeat: 2,
+                      repeatType: "mirror",
                     },
                   }}
-                  className="absolute lg:w-[200px] lg:h-[200px] w-[100px] h-[100px] lg:bottom-[180px] bottom-[130px] left-[6px]"
+                  className="absolute lg:w-[200px] lg:h-[200px] w-[100px] h-[100px] lg:bottom-[180px] bottom-[130px] left-1/2 transform -translate-x-1/2"
+                  style={{ transform: "translateX(-50%) !important" }}
                 >
                   <Image
                     src={goldMedal}
@@ -96,11 +93,12 @@ const Rewards = () => {
                     alt="gold"
                   />
                 </motion.div>
+
                 <div className="relative flex flex-col items-center gap-y-2 text-center lg:mt-[150px] lg:px-[40px] mt-[70px] px-[20px] ">
                   <h4 className="text-lg md:text-[28px] text-white font-bold">
                     1st <span className="text-sm block">Runner</span>
                   </h4>
-                  <h3 className="text-[#903AFF] font-bold text-[16px] md:text-[30px]">
+                  <h3 className="text-[#903AFF] font-bold text-[14px] md:text-[30px]">
                     N4000,000
                   </h3>
                 </div>
