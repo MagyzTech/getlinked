@@ -14,7 +14,6 @@ const Hero = () => {
     <section
       className={`relative w-full grid grid-rows-[auto,1fr] lg:block min-h-[90vh] mx-auto`}
     >
-      <div className="lens"></div>
       <div
         className={`relative z-[1] max-w-7xl mx-auto ${styles.paddingX} lg:grid lg:grid-rows-[auto,1fr] gap-7 lg:min-h-full`}
       >
