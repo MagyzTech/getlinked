@@ -10,9 +10,13 @@ import { idea } from "@/app/constants/assets";
 const About = () => {
   return (
     <div className="min-h-[50vh] text-left grid gap-9 lg:grid-cols-2 items-center">
-      <div className="relative w-full  h-[300px] lg:h-[400px]">
+      <motion.div
+        className="relative w-full h-[300px] lg:h-[400px]"
+        animate={{ rotate: [0, 360] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      >
         <Image src={idea} layout="fill" objectFit="contain" alt="globe" />
-      </div>
+      </motion.div>
       <div>
         <motion.div variants={textVariant()}>
           <h2 className={styles.sectionHeadText}>
